@@ -8,8 +8,7 @@ mixer.init()
 sound = mixer.Sound('alarm.wav') 
 
 model = load_model('eye_state_model.h5')  
-url = "http://192.168.1.20:4747/video"
-cam = cv.VideoCapture(url)
+cam = cv.VideoCapture(0)
 face = cv.CascadeClassifier("haarcascade_frontalface_default.xml")
 leye = cv.CascadeClassifier("haarcascade_lefteye_2splits.xml")
 reye = cv.CascadeClassifier("haarcascade_righteye_2splits.xml")
